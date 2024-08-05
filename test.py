@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import openai
 import os
-from dotenv import load_dotenv
-#insatlled openai
-load_dotenv()
+#from dotenv import load_dotenv
+
+#load_dotenv()
 
 # Load your dataset
 df = pd.read_csv(r'data\F_DIS_DS_WHS_half.csv')
@@ -25,7 +25,7 @@ user_question = st.text_input("Enter your question:")
 
 if st.button("Submit"):
     try:
-        api_key = os.environ["OPENAI_API_KEY"]
+        api_key = st.secrets["OPENAI_API_KEY"]
         openai.api_key = api_key
 
         dataset_summary = df.to_dict(orient='records')
