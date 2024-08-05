@@ -3,7 +3,7 @@ import pandas as pd
 import openai
 import os
 from dotenv import load_dotenv
-
+#insatlled openai
 load_dotenv()
 
 # Load your dataset
