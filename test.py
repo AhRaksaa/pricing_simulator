@@ -7,7 +7,7 @@ import os
 #load_dotenv()
 
 # Load your dataset
-df = pd.read_csv(r'data\F_DIS_DS_WHS_half.csv')
+df = pd.read_csv(r'F_DIS_DS_WHS_half.csv')
 
 # Load HTML content from external file
 with open('template.html', 'r') as f:
